@@ -25,6 +25,7 @@ end
 S.ICONS = {
   ["Warrior/Fury"] = { "Interface\\Icons\\ClassIcon_Warrior", "Interface\\Icons\\Ability_Warrior_InnerRage" },
   ["Warrior/Arms"] = { "Interface\\Icons\\ClassIcon_Warrior", "Interface\\Icons\\Ability_Warrior_SavageBlow" },
+  ["Priest/Shadow"] = { "Interface\\Icons\\ClassIcon_Priest", "Interface\\Icons\\Spell_Shadow_ShadowWordPain" },
 }
 
 -- 14×14, the middle 86 % of the texture: Blizzard's border cut off, as the site's icons (scale(1.16))

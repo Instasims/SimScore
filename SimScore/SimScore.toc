@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: SimScore
 ## Notes: A player's SimScore in their tooltip: how their gear and talents sim against every character of their spec. Install your server's SimScore data too.
-## Version: 1.0.0
+## Version: 1.1.0
 
 Core.lua
 SimScore.lua

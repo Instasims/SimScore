@@ -10,7 +10,8 @@ each, best first. Each spec keeps the character's best score ever, so a respec o
 lower it.
 
 Every character is simmed by [Instasims](https://instasims.org) with the same raid buffs, consumables and fight, so
-the score only moves when the character changes. Level-60 Fury warriors for now; more specs to come.
+the score only moves when the character changes. Level-60 Fury warriors and Shadow priests for now; more specs to
+come.
 
 ## Install
 
