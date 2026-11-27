@@ -22,7 +22,9 @@ daily.
 
 - `SimScore/`: the tooltip addon. `Core.lua` is the logic without the game's API (tested in the Instasims repo).
 - `SimScore_DB_<REGION>_<Ruleset>/`: one server's scores, `Data.lua` written by the release job.
-- `pkgmeta/`: one package per server for the BigWigs packager.
+- `pkgmeta/`: one package per server for the BigWigs packager: the tooltip addon and that server's data addon, nothing
+  else (the other servers' folders are ignored, so the package's own folder is left empty and dropped).
+- `CHANGELOG.md`: the release notes on CurseForge and Wago; not in the zip.
 - `.github/workflows/release.yml`: downloads every server's scores from Instasims
   (`/api/simscores/forever/<region>/<ruleset>.lua`), commits and tags `vYYYYMMDD`, and packages each server to
   CurseForge, Wago and GitHub Releases.

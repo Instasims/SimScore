@@ -1,8 +1,20 @@
 # The SimScore package of the US Normal server: the tooltip addon and that server's data addon.
 package-as: SimScore_US_Normal
+# the upload's notes, kept out of the zip (ignored below)
+manual-changelog: CHANGELOG.md
 move-folders:
   SimScore_US_Normal/SimScore: SimScore
   SimScore_US_Normal/SimScore_DB_US_Normal: SimScore_DB_US_Normal
+# everything else left out, so the package's own folder ends up empty and goes: the zip holds the two addons only
 ignore:
   - pkgmeta
   - README.md
+  - CHANGELOG.md
+  - LICENSE
+  - SimScore_DB_EU_Normal
+  - SimScore_DB_EU_PvP
+  - SimScore_DB_EU_Roleplay
+  - SimScore_DB_EU_RoleplayPvP
+  - SimScore_DB_US_PvP
+  - SimScore_DB_US_Roleplay
+  - SimScore_DB_US_RoleplayPvP
