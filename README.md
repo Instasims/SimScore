@@ -10,8 +10,9 @@ each, best first. Each spec keeps the character's best score ever, so a respec o
 lower it.
 
 Every character is simmed by [Instasims](https://instasims.org) with the same raid buffs, consumables and fight, so
-the score only moves when the character changes. Level-60 Fury warriors, Shadow priests, Retribution
-paladins and Marksmanship and Survival hunters for now; more specs to come.
+the score only moves when the character changes. Level-60 characters of every class: Fury warriors, Shadow
+priests, Retribution paladins, Marksmanship and Survival hunters, every rogue, mage and warlock tree, Elemental and
+Enhancement shamans, and Balance and Feral druids.
 
 ## Install
 

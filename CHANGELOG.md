@@ -2,6 +2,11 @@
 
 Each release carries the day's scores. Changes to the addon itself:
 
+## 1.4.0
+
+- Every rogue, mage and warlock tree, Elemental and Enhancement shamans, and Balance and Feral druids, each with its
+  class icon and its tree's.
+
 ## 1.3.0
 
 - Marksmanship and Survival hunters, with the hunter icon and each tree's.

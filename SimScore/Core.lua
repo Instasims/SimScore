@@ -29,6 +29,19 @@ S.ICONS = {
   ["Paladin/Retribution"] = { "Interface\\Icons\\ClassIcon_Paladin", "Interface\\Icons\\Spell_Holy_AuraOfLight" },
   ["Hunter/Marksmanship"] = { "Interface\\Icons\\ClassIcon_Hunter", "Interface\\Icons\\Ability_Marksmanship" },
   ["Hunter/Survival"] = { "Interface\\Icons\\ClassIcon_Hunter", "Interface\\Icons\\Ability_Hunter_SwiftStrike" },
+  ["Rogue/Assassination"] = { "Interface\\Icons\\ClassIcon_Rogue", "Interface\\Icons\\Ability_Rogue_Eviscerate" },
+  ["Rogue/Combat"] = { "Interface\\Icons\\ClassIcon_Rogue", "Interface\\Icons\\Ability_Backstab" },
+  ["Rogue/Subtlety"] = { "Interface\\Icons\\ClassIcon_Rogue", "Interface\\Icons\\Ability_Stealth" },
+  ["Mage/Arcane"] = { "Interface\\Icons\\ClassIcon_Mage", "Interface\\Icons\\Spell_Holy_MagicalSentry" },
+  ["Mage/Fire"] = { "Interface\\Icons\\ClassIcon_Mage", "Interface\\Icons\\Spell_Fire_FireBolt02" },
+  ["Mage/Frost"] = { "Interface\\Icons\\ClassIcon_Mage", "Interface\\Icons\\Spell_Frost_FrostBolt02" },
+  ["Warlock/Affliction"] = { "Interface\\Icons\\ClassIcon_Warlock", "Interface\\Icons\\Spell_Shadow_DeathCoil" },
+  ["Warlock/Demonology"] = { "Interface\\Icons\\ClassIcon_Warlock", "Interface\\Icons\\Spell_Shadow_Metamorphosis" },
+  ["Warlock/Destruction"] = { "Interface\\Icons\\ClassIcon_Warlock", "Interface\\Icons\\Spell_Shadow_RainOfFire" },
+  ["Shaman/Elemental"] = { "Interface\\Icons\\ClassIcon_Shaman", "Interface\\Icons\\Spell_Nature_Lightning" },
+  ["Shaman/Enhancement"] = { "Interface\\Icons\\ClassIcon_Shaman", "Interface\\Icons\\Spell_Nature_LightningShield" },
+  ["Druid/Balance"] = { "Interface\\Icons\\ClassIcon_Druid", "Interface\\Icons\\Spell_Nature_StarFall" },
+  ["Druid/Feral Combat"] = { "Interface\\Icons\\ClassIcon_Druid", "Interface\\Icons\\Ability_Racial_BearForm" },
 }
 
 -- 14×14, the middle 86 % of the texture: Blizzard's border cut off, as the site's icons (scale(1.16))
