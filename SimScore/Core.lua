@@ -27,6 +27,8 @@ S.ICONS = {
   ["Warrior/Arms"] = { "Interface\\Icons\\ClassIcon_Warrior", "Interface\\Icons\\Ability_Warrior_SavageBlow" },
   ["Priest/Shadow"] = { "Interface\\Icons\\ClassIcon_Priest", "Interface\\Icons\\Spell_Shadow_ShadowWordPain" },
   ["Paladin/Retribution"] = { "Interface\\Icons\\ClassIcon_Paladin", "Interface\\Icons\\Spell_Holy_AuraOfLight" },
+  ["Hunter/Marksmanship"] = { "Interface\\Icons\\ClassIcon_Hunter", "Interface\\Icons\\Ability_Marksmanship" },
+  ["Hunter/Survival"] = { "Interface\\Icons\\ClassIcon_Hunter", "Interface\\Icons\\Ability_Hunter_SwiftStrike" },
 }
 
 -- 14×14, the middle 86 % of the texture: Blizzard's border cut off, as the site's icons (scale(1.16))

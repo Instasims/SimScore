@@ -2,6 +2,10 @@
 
 Each release carries the day's scores. Changes to the addon itself:
 
+## 1.3.0
+
+- Marksmanship and Survival hunters, with the hunter icon and each tree's.
+
 ## 1.2.0
 
 - Retribution paladins, with the paladin and Retribution icons.
