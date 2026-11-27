@@ -1,0 +1,63 @@
+# SimScore's daily release (simscore spec §7): every server's data file from Instasims, a tag of the day, and one
+# package per server to CurseForge, Wago and GitHub Releases (WowUp installs from all three) by the BigWigs packager.
+# Secrets: CF_API_KEY, WAGO_API_TOKEN. Variables: CF_PROJECT_<SERVER> and WAGO_PROJECT_<SERVER> per server (EU_PVP, …).
+name: release
+on:
+  # the daily run: on once the CurseForge and Wago projects and their secrets and variables are set (README)
+  # schedule:
+  #   - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.tag.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download every server's scores
+        run: |
+          for region in eu us; do
+            for ruleset in normal pvp roleplay roleplay-pvp; do
+              key=$(echo "$ruleset" | sed -e 's/roleplay-pvp/RoleplayPvP/' -e 's/^normal$/Normal/' -e 's/^pvp$/PvP/' -e 's/^roleplay$/Roleplay/')
+              dir="SimScore_DB_$(echo "$region" | tr a-z A-Z)_${key}"
+              curl -fsS "https://instasims.org/api/simscores/forever/${region}/${ruleset}.lua" -o "$dir/Data.lua"
+            done
+          done
+      - id: tag
+        name: Commit and tag the day's data
+        run: |
+          tag="v$(date -u +%Y%m%d)"
+          git config user.name "SimScore release"
+          git config user.email "actions@users.noreply.github.com"
+          git add SimScore_DB_*/Data.lua
+          git commit -m "Data of $(date -u +%F)" || true
+          git tag -f "$tag"
+          git push origin HEAD "$tag" --force
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+
+  package:
+    needs: data
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        server: [EU-Normal, EU-PvP, EU-Roleplay, EU-RoleplayPvP, US-Normal, US-PvP, US-Roleplay, US-RoleplayPvP]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.data.outputs.tag }}
+          fetch-depth: 0
+      - id: ids
+        run: |
+          key=$(echo "${{ matrix.server }}" | tr a-z- A-Z_)
+          echo "key=$key" >> "$GITHUB_OUTPUT"
+      - uses: BigWigsMods/packager@v2
+        with:
+          args: -m pkgmeta/${{ matrix.server }}.yml -p ${{ vars[format('CF_PROJECT_{0}', steps.ids.outputs.key)] }} -a ${{ vars[format('WAGO_PROJECT_{0}', steps.ids.outputs.key)] }}
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}

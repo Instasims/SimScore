@@ -1,0 +1,8 @@
+# The SimScore package of the EU RoleplayPvP server: the tooltip addon and that server's data addon.
+package-as: SimScore_EU_RoleplayPvP
+move-folders:
+  SimScore_EU_RoleplayPvP/SimScore: SimScore
+  SimScore_EU_RoleplayPvP/SimScore_DB_EU_RoleplayPvP: SimScore_DB_EU_RoleplayPvP
+ignore:
+  - pkgmeta
+  - README.md

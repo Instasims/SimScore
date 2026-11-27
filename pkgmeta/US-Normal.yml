@@ -1,0 +1,8 @@
+# The SimScore package of the US Normal server: the tooltip addon and that server's data addon.
+package-as: SimScore_US_Normal
+move-folders:
+  SimScore_US_Normal/SimScore: SimScore
+  SimScore_US_Normal/SimScore_DB_US_Normal: SimScore_DB_US_Normal
+ignore:
+  - pkgmeta
+  - README.md

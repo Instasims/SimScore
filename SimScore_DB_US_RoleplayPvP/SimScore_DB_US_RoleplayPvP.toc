@@ -1,0 +1,10 @@
+## Interface: 16001
+## Title: SimScore Data (US Roleplay PvP)
+## Notes: SimScore's scores for the US Roleplay PvP server. Loaded by SimScore on that server.
+## Version: 1.0.0
+## LoadOnDemand: 1
+## Dependencies: SimScore
+## X-SimScore-Region: us
+## X-SimScore-Ruleset: Roleplay PvP
+
+Data.lua
