@@ -2,6 +2,10 @@
 
 Each release carries the day's scores. Changes to the addon itself:
 
+## 1.2.0
+
+- Retribution paladins, with the paladin and Retribution icons.
+
 ## 1.1.0
 
 - Shadow priests: a level-60 Shadow priest's SimScore, with the priest and Shadow icons.
